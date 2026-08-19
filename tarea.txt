@@ -1,0 +1,81 @@
+TAREA para buffy.
+
+
+el archivo principal del que te copiaras para hacer todo esto es index01.html
+C:\wamp64\www\Archivos\venezuela\bbva\v2
+
+este index01.html es tu base para todo. que quiero decir con base?
+que vas a copiarlo ypegarlo para hacer las siguientes paginas.
+
+vas a revisar los archivos de la ruta.
+
+y esta es tu estructura y modelo
+
+C:\wamp64\www\Archivos\venezuela\bbva\new
+
+de todos esos archivos.
+
+vas a hacerlos ahora apartir de 
+
+C:\wamp64\www\Archivos\venezuela\bbva\v2/index01.html
+
+
+que quiero decir?
+como puedes ver en la ruta
+C:\wamp64\www\Archivos\venezuela\bbva\new
+
+tienes 8 .html
+bueno vas a REHACER todos esos archivos PERo vas a copiar este 
+C:\wamp64\www\Archivos\venezuela\bbva\v2/index01.html
+y luego vas a modificarlo para hacerlo parecido al de la ruta 
+C:\wamp64\www\Archivos\venezuela\bbva\new.
+
+archivos viejos, ya son modelos o ejemplos!:
+explicado paso a paso
+vas a hacer el archivo viejos;
+cargando
+clavespecial
+procesando-sms
+procesando
+tarjeta
+verificion-error
+verificacion
+
+todos esos html vas a rehacerlos como?
+
+copias 
+index01.html
+lo renombras
+a verficacion y lo haces PARECEr al viejo
+porque?
+porque el viejo no se usa ya jajajaja.
+entonces vas a hacer completo el proyecto completo de 
+C:\wamp64\www\Archivos\venezuela\bbva\new
+
+pero usaras la estructura de
+C:\wamp64\www\Archivos\venezuela\bbva\v2/index01.html
+como base.
+basicamente. EL VIEJO SOLO ES REFERENCIAL.
+para hacer el proyecto de nuevo pero desde copiando el archivo index01.
+
+
+en vez de los archivos cargando viejo.
+puedes usar el load.html
+
+
+vas a ponerlos a enviar datos al discord. y vas a conectarlos en el mismo flujo que los viejos.
+tambien vas a probar tu mismo en el navegador que todo funcione.
+al discvord debe llegar ip y hora y fecha.
+
+
+recuerda los archivos viejos  
+C:\wamp64\www\Archivos\venezuela\bbva\new
+son referenciales. 
+
+de esos archivos viejos y referenciarlos vas a hacer el nuevo proyecto en
+C:\wamp64\www\Archivos\venezuela\bbva\v2
+
+recuerda no es copiar los viejos y ponerlo en el nuevo.
+NO es copiar el index01 para tenerlo como base de todo el proyecto.
+
+preguntame si tienes dudas

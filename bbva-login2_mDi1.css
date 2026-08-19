@@ -1,0 +1,638 @@
+/*iframe*/
+html, body {
+ max-width: 100vw!important;
+}
+
+/* INICIO: MEDIA QUERIA VERSION (PC) MIN-WIDTH: 700 */
+@media (min-width:768px) {
+     #container2 {
+         max-width: 350px;
+         width: 100%;
+         margin: 0px auto;
+         display: block;
+         margin-top: 7%;
+         /*posible cambio margin-top: 7%;*/
+     }
+     .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+        width: 32%;
+    }
+    .btn{
+        width: 32%!important;
+        margin: 16px 0!important;
+    }
+    .dropdown-icon{
+      -webkit-transform:rotateZ(180deg)!important;
+      -moz-transform:rotateZ(180deg)!important;
+      -ms-transform:rotate(180deg)!important;
+      -o-transform:rotateZ(180deg)!important;
+      transform:rotateZ(180deg)!important;
+    }
+    .recuperar{
+        width: 268px;
+        max-width: 100%;
+    }
+    #tooltip{
+        width: 12%;
+    }
+  
+}
+/* INICIO: ESTILOS SOLO PARA VISUALIZACION EN MOZILLA FIREFOX */
+
+    @-moz-document url-prefix() {
+      .box-blue {
+        left: 35%;
+      }
+}
+
+/* FIN: ESTILOS SOLO PARA VISUALIZACION EN MOZILLA FIREFOX */
+@media(max-width:768px) {
+        .formaem {
+            width: 100%;
+            padding: 0px 32px;
+            box-sizing: border-box;
+            margin-top: -2%; 
+        }
+        a, .links {
+            position: relative!important;
+            color: #1973b8!important;
+            display: inline-block!important;
+            text-decoration: none!important;
+            background-color: transparent!important;
+            -webkit-text-decoration-skip: objects!important;
+        }
+        #tooltip{
+            width: 44%;
+        }
+
+  }
+
+    .login h1{
+      text-align: center;
+    }
+
+    .container {
+        max-width: 530px;
+        width: 100%;
+        margin: 0px auto;
+        display: block;
+    }
+    .container h1{
+      font-size:32px;
+      font-family: "BentonSansBBVA Book", "Helvetica Neue", Arial, Helvetica, sans-serif!important;
+      color: #121212;
+      margin-left: 2%;
+    }
+
+    select {
+        padding: 25px 10px 0 16px;
+        background: #f4f4f4;
+        border: 0;
+        border-bottom: 1px solid #000;
+        height: 56px;
+        width: 100%;
+        border-radius: 1px;
+        -webkit-border-radius:1px;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        font-size:15px!important;
+    }
+
+    input:not([type=radio]),
+    select {
+        font-family: "BentonSansBBVA Book";
+        color: #121212
+    }
+
+    .divfrecuentes{
+          margin-bottom: 1rem;
+    }
+
+    .formaem #lnkModificacion {
+        font-size: 13px;
+        padding: 15px 0px 10px 0px;
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .form-group p.help-message {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .rel {
+        position: relative;
+    }
+    label.control-label {
+        position: absolute;
+        margin: auto;
+        overflow: hidden;
+        cursor: text;
+        color: #121212;
+        -webkit-transition: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all;
+        top: 20px;
+        left: 16px;
+        font-size: 15px;
+    }
+    label.control-label {
+        font-family: "BentonSansBBVA Book", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+    label.labelfrecuentes {
+        display: block !important;
+        margin-bottom: 10px;
+    }
+    label.labelfrecuentes span {
+        display: inline-block;
+        line-height: 24px;
+        font-size: 14px;
+        vertical-align: top;
+        color:#121212;
+    }
+    label span,
+    .form-group p.help-msg {
+        font-family: "BentonSansBBVA Book", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+    .form-group p.help-msg {
+        font-size: 12px;
+    }
+    hr.bg-white {
+        display: block;
+        height: 1px;
+        border: 0;
+        margin: 1em 0;
+        padding: 0;
+        border-top: 1px solid #d3d3d3;
+    }
+    .center {
+        text-align: center;
+    }
+    .icon-password {
+        width: 24px;
+        height: 18px;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 100%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+    }
+    .icon-password.mostrarPassword {
+        background-image: url(../fbin/icon-show-blue.png);
+    }
+    .icon-password.ocultarPassword {
+        background-image: url(../fbin/icon-hide.png);
+    }
+    #FrecuentesLabel .remind-document {
+        position: absolute;
+        right: 60px;
+        z-index: 1;
+    }
+    #FrecuentesLabel {
+        height: 24px;
+        display: inline-block;
+    }
+    #FrecuentesLabel .box-blue:before,
+    #chkBorrarLabel .box-blue:before {
+        font-size: 24px;
+    }
+    #chkBorrarLabel .delete-document {
+        position: absolute;
+        right: 50px;
+        z-index: 1;
+    }
+
+
+/* INICIO: ESTILO CHECKBOX */
+
+
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #000;
+        margin-right: 8px;
+        display: block;
+    } 
+    input[type="checkbox"]:before {
+        width: 14px;
+        height: 14px;
+        box-sizing: border-box;
+        position: relative;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        top: 4px;
+        left: 4px;
+        -webkit-appearance: none!important;
+        -moz-appearance: none!important;
+        -ms-appearance: none!important;
+        -o-appearance: none!important;
+    }
+    input[type="checkbox"]:checked:before {
+        -webkit-appearance: none!important;
+        -moz-appearance: none!important;
+        -ms-appearance: none!important;
+        -o-appearance: none!important;
+        background-color: #004481;
+        background: url(../fbin/icon-checkmark.png) no-repeat center;
+    }
+    input:not([type=radio]):not([type=checkbox]).validacion {
+        -moz-appearance: none!important;
+        -ms-appearance: none!important;
+        color: #121212;
+        background-color: #fcdfdf;
+        border-bottom-color: #b92a45;
+    }
+/* FIN: ESTILO CHECKBOX */
+
+/* INICIO: ESTILOS DEL TOOLTIP */
+
+    #tooltip{
+        color: #575757;
+        background: #D4EDFC;
+        border:1px solid #D4EDFC;
+        position: absolute;
+        z-index: 100;
+        padding: 7px;
+        font-family:"BentonSansBBVA Light", "Helvetica Neue", Arial, Helvetica, sans-serif!important;
+        font-size: 12px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 8px;
+        line-height:16px;
+        text-align: center;
+    }
+ 
+    #tooltip:after {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #D4EDFC;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+    #tooltip.top:after
+    {
+        border-top-color: transparent;
+        border-bottom: 10px solid #111;
+        top: -20px;
+        bottom: auto;
+    }
+
+    #tooltip.left:after
+    {
+        left: 10px;
+        margin: 0;
+    }
+
+    #tooltip.right:after
+    {
+        right: 10px;
+        left: auto;
+        margin: 0;
+    }
+
+/* FIN: ESTILOS DEL TOOLTIP */
+
+/* INICIO: ESTILO IMAGEN QUESTION */
+
+    .question-circle{
+        position: relative;
+        background-image: url("../fbin/icon-help.png") !important;
+        width: 22px;
+        height: 22px;
+    }
+
+/* estilo hover */
+
+    input:not([type=radio]):not([type=checkbox]).validacion {
+        -moz-appearance: none!important;
+        -ms-appearance: none!important;
+        color: #121212;
+        background-color: #fcdfdf;
+        border-bottom-color: #b92a45;
+    }
+    input.focus-label~label{
+        font-family: "BentonSansBBVA Book", "Helvetica Neue", Arial, Helvetica, sans-serif!important;
+        top:10px;
+        left:16px;
+        font-size:12px;
+        color: #121212;
+    }
+    select.focus-label~label{
+        font-family: "BentonSansBBVA Book", "Helvetica Neue", Arial, Helvetica, sans-serif!important;
+        top:10px;
+        left:22px;
+        font-size:12px;
+    }
+    .botonEntrar{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        margin-top: 3%; 
+    }
+    .boton{
+        height: 56px;
+        max-width: 100%;
+        padding: 16px!important;
+        font-size: 15px!important;
+        border-radius: 1px!important;
+        border: 0!important;
+        color: #fff!important;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: normal!important;
+        padding: 15px 0px 10px 0px;
+        margin: 8px 0px;
+        margin-left: 0%;
+        text-align: center!important;
+        background-color: #1973b8 !important;
+    }
+    .boton:focus{
+        outline: #fff solid 1px!important;
+        outline-offset: -6px!important;
+        background-position: 0 center;
+    }
+    .btn{
+        font-family: "BentonSansBBVA Medium", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        font-size: 13px;
+        border-radius: 1px;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: normal;
+        margin: 8px 0;
+        text-align: center;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: inherit;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background-size: 210% 100%;
+        background-position: 100% center;
+        background-repeat: no-repeat;
+        -webkit-transition: background-position .5s cubic-bezier(0.4, 0, 0.2, 1);
+        -o-transition: background-position .5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-position .5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-sizing: border-box;
+    }
+    .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+        background: #E9E9E9!important; 
+        color: #BDBDBD !important;
+        pointer-events: none;
+    }
+    img{
+        /*float: right!important;*/
+        border-style: none!important;
+    }
+    .show-Password {
+        position: absolute;
+        top: 39%;
+        right: 13px;
+        height: 18px;
+    }
+    .hide-Password {
+        position: absolute;
+        top: 39%;
+        right: 13px;
+        height: 18px;
+    }
+    a, .links {
+        position: relative!important;
+        color: #1973b8!important;
+        display: inline-block!important;
+        text-decoration: none!important;
+        background-color: transparent!important;
+        -webkit-text-decoration-skip: objects!important;
+    }
+    .btn{
+        margin: 3%;
+        margin-left: 0%;
+        margin-top: 2%;
+    }
+    .recuperar{
+        width: 268px;
+        max-width: 100%;
+       
+    }
+    .recuperar2{
+        color:#666666 !important;
+    }
+    
+    .fa-angle-down{
+        position: absolute;
+        top: 50% !important;
+        right: 15px;
+        width: 14px;
+        height: 10px;
+        pointer-events: none;
+        color: #1464a5;
+    }
+    select:focus~ .fa-angle-down{
+        -webkit-transform:rotateZ(180deg);
+        -moz-transform:rotateZ(180deg);
+        -ms-transform:rotate(180deg);
+        -o-transform:rotateZ(180deg);
+        transform:rotateZ(180deg) 
+    }
+    .recuperar1, .rec2{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        position: relative;
+       
+    }
+     .rec2{
+        margin-top: 6%;
+     }
+
+
+     /*RESPONSIVE HEADER Y FOOTER*/
+
+
+     @media (min-width: 320px) and (max-width: 1080px){
+
+        .barra1 {
+            display: none;
+        }
+        .txt20 {
+            display: none;
+        }
+        .outside1 {
+            display: none;
+        }
+        .headerRight1 {
+            font-size: 10px;
+            font-family: 'BentonSansBBVA-Medium';
+            top: 65%;
+            width: 100%;
+            left: auto;
+        }
+        .container {
+            width: auto;
+            padding: 0;
+            margin-top: 15%;
+        }
+    
+        .contenu-footer {
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            height: auto !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            justify-content: space-evenly !important;
+            flex-direction: column !important;
+        }
+        .footer-services {
+            width: auto ;
+            margin: auto;
+            height: auto;
+        }
+        .logos1 {
+            margin-top: 15% !important;
+            position: relative !important;
+            margin-left: 10% !important;
+        }
+        .iconos0 {
+            right: 0%;
+            position: relative;
+            width: 135%;
+            margin-top: -39% !important;
+            margin-left: auto !important;
+        }
+        .textP1 {
+            font-size: 10px !important;
+            left: 0%;
+            position: relative;
+            top: 26%;
+        }
+        .textP{
+            margin-top: 51px !important;
+        }
+        .bloc {
+            width: auto !important;
+            margin: auto !important;
+            height: auto !important;
+        }
+        .creaOP1 {
+            color: #2DCCCD;
+            font-family: 'BentonSansBBVA Medium';
+            font-size: 10px;
+            width: 100%;
+            position: relative;
+            top: 4%;
+            font-size: 10px !important;
+        }
+        .creaOP {
+            margin-top: 17% !important;
+            margin-left: 10% !important;
+            width: 100% !important;
+        }
+        .headerRight {
+            font-size: 10px !important;
+            font-family: 'BentonSansBBVA-Medium';
+            top: 60% !important;
+            width: 100% !important;
+            left: auto !important;
+            position: absolute !important;
+        }
+        .closex {
+            height: 20px;
+            width: 20px;
+            margin-right: 7%;
+            margin-top: 0%;
+        }
+        .headerLogo {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            left: 0%;
+            top: -6px !important;
+            cursor: pointer;
+            max-height: 20px;
+            position: relative !important;
+        }
+        footer {
+
+            height: 180px !important;
+
+        }
+        .headerLogo {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            left: 0%;
+            top: -6px;
+            cursor: pointer;
+            max-height: 20px;
+            position: relative;
+        }
+    }
+
+    @media(min-width:1080px) {
+
+        .closex{
+            display: none;
+
+        }
+    }
+
+    @media (min-width: 799px) and (max-width: 808px){
+
+        #container2 {
+
+            margin-top: 28% !important;
+        }
+
+       }
+       @media (min-width: 1010px) and (max-width: 1020px){
+
+        #container2 {
+
+            margin-top: 15% !important;        }
+
+       }
+
+       @media (min-width: 1021px) and (max-width: 1030px){
+
+        #container2 {
+
+            margin-top: 19%!important;        
+        }
+
+       }
+       @media (min-width: 768px) and (max-width: 1080px){
+        .headerRight {
+            font-size: 10px !important;
+            font-family: 'BentonSansBBVA-Medium';
+            top: 52% !important;
+            width: 100% !important;
+            left: auto !important;
+            position: absolute !important;
+        }
+
+       }
